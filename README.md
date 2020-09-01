@@ -82,8 +82,6 @@ As an example you can check console on [Katacoda Kubernetes Playground](https://
 
 ![2](https://user-images.githubusercontent.com/59168275/91818221-2d475b00-ec3e-11ea-9686-30043f653c3a.png)
 
-![OLM](https://github.com/operator-framework/operator-lifecycle-manager/blob/master/logo.svg)
-
 - You can view Operators also after you deploy OLM(OPERATOR LIFECYLE MANAGER) into the cluster from this link: [OLM Github Releases](https://github.com/operator-framework/operator-lifecycle-manager/releases/)
 
 ![4](https://user-images.githubusercontent.com/59168275/91818268-30424b80-ec3e-11ea-96dd-4dd275ed4758.png)
