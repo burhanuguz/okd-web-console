@@ -1,5 +1,5 @@
 # OKD Web Console
-Applying this YAML file will bring OKD Web Console(like openshift) to your cluster.
+Change NODE-IP in the ingress definition to your worker node IP. After that, applying this YAML file will bring OKD Web Console(like openshift) to your cluster.
 
 ```YAML
 apiVersion: apps/v1
@@ -62,8 +62,23 @@ spec:
       port: 443
       targetPort: 8443
   type: NodePort
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: okd
+  namespace: kube-system
+spec:
+  rules:
+  - host: console-okd.NODE-IP.nip.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: okd
+          servicePort: 443
 ```
-This can be check from [Katacoda Kubernetes Playground](https://www.katacoda.com/courses/kubernetes/playground)
+As an example you can check console on [Katacoda Kubernetes Playground](https://www.katacoda.com/courses/kubernetes/playground)
 - Deploy YAML to Kubernetes Cluster and wait for successful deployment.
 
 ![1](https://user-images.githubusercontent.com/59168275/91818196-2b7d9780-ec3e-11ea-8ef7-9189a0984c63.png)
