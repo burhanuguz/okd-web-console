@@ -66,17 +66,17 @@ spec:
 This can be check from [Katacoda Kubernetes Playground](https://www.katacoda.com/courses/kubernetes/playground)
 - Deploy YAML to Kubernetes Cluster and wait for successful deployment.
 
-![1](https://github.com/burhanuguz/okd-web-console/blob/master/pictures/1.png)
+![1](https://user-images.githubusercontent.com/59168275/91818196-2b7d9780-ec3e-11ea-8ef7-9189a0984c63.png)
 - Console will be available from NodePort 30000. Select either Host 1 or Host 2 like in the picture. Type 30000 and click Display Port.
 
-![5](https://github.com/burhanuguz/okd-web-console/blob/master/pictures/5.png)
-![6](https://github.com/burhanuguz/okd-web-console/blob/master/pictures/6.png)
+![5](https://user-images.githubusercontent.com/59168275/91818296-320c0f00-ec3e-11ea-887b-754d80cbe132.png)
+![6](https://user-images.githubusercontent.com/59168275/91818172-291b3d80-ec3e-11ea-83b9-e727022706c8.png)
 - You will see OKD Web Console.
 
-![2](https://github.com/burhanuguz/okd-web-console/blob/master/pictures/2.png)
+![2](https://user-images.githubusercontent.com/59168275/91818221-2d475b00-ec3e-11ea-9686-30043f653c3a.png)
 
 ![OLM](https://github.com/operator-framework/operator-lifecycle-manager/blob/master/logo.svg)
 
 - You can view Operators also after you deploy OLM(OPERATOR LIFECYLE MANAGER) into the cluster from this link: [OLM Github Releases](https://github.com/operator-framework/operator-lifecycle-manager/releases/)
 
-![4](https://github.com/burhanuguz/okd-web-console/blob/master/pictures/4.png)
+![4](https://user-images.githubusercontent.com/59168275/91818268-30424b80-ec3e-11ea-96dd-4dd275ed4758.png)
