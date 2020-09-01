@@ -58,3 +58,18 @@ spec:
       port: 443
       targetPort: 8443
   type: NodePort
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: okd
+  namespace: kube-system
+spec:
+  rules:
+  - host: console-okd.NODE-IP.nip.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: okd
+          servicePort: 443
