@@ -67,6 +67,7 @@ This can be check from [Katacoda Kubernetes Playground](https://www.katacoda.com
 - Deploy YAML to Kubernetes Cluster and wait for successful deployment.
  ![1](https://github.com/burhanuguz/okd-web-console/blob/master/pictures/1.png)
 - Console will be available from NodePort 30000. Select either Host 1 or Host 2 like in the picture. Type 30000 and click Display Port.
+
 ![5](https://github.com/burhanuguz/okd-web-console/blob/master/pictures/5.png)
 ![6](https://github.com/burhanuguz/okd-web-console/blob/master/pictures/6.png)
 - You will see OKD Web Console.
