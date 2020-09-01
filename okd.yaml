@@ -54,10 +54,8 @@ spec:
     app: okd
   ports:
     - protocol: TCP
-      nodePort: 30000
       port: 443
       targetPort: 8443
-  type: NodePort
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
