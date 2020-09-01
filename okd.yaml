@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: okd
+  name: okd
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      app: okd
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: okd
+    spec:
+      containers:
+      - image: quay.io/openshift/origin-console:latest
+        name: okd
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8443
+            scheme: HTTP
+          timeoutSeconds: 1
+          periodSeconds: 10
+          successThreshold: 1
+          failureThreshold: 3
+        resources:
+          requests:
+            cpu: 10m
+            memory: 100Mi
+          limits:
+            cpu: 20m
+            memory: 200Mi
+        command:
+          - /opt/bridge/bin/bridge
+          - '--k8s-auth=service-account'
+          - '--listen=http://0.0.0.0:8443'
+          - '--public-dir=/opt/bridge/static'
+        ports:
+          - name: https
+            containerPort: 443
+            protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: okd
+  namespace: kube-system
+spec:
+  selector:
+    app: okd
+  ports:
+    - protocol: TCP
+      nodePort: 30000
+      port: 443
+      targetPort: 8443
+  type: NodePort
