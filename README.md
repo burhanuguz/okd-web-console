@@ -65,7 +65,7 @@ spec:
 ```
 This can be check from [Katacoda Kubernetes Playground](https://www.katacoda.com/courses/kubernetes/playground)
 - Deploy YAML to Kubernetes Cluster and wait for successful deployment.
-![1](https://github.com/burhanuguz/okd-web-console/blob/master/pictures/1.png)
+ ![1](https://github.com/burhanuguz/okd-web-console/blob/master/pictures/1.png)
 - Console will be available from NodePort 30000. Select either Host 1 or Host 2 like in the picture. Type 30000 and click Display Port.
 ![5](https://github.com/burhanuguz/okd-web-console/blob/master/pictures/5.png)
 ![6](https://github.com/burhanuguz/okd-web-console/blob/master/pictures/6.png)
@@ -74,5 +74,4 @@ This can be check from [Katacoda Kubernetes Playground](https://www.katacoda.com
 
 ![OLM](https://github.com/operator-framework/operator-lifecycle-manager/blob/master/logo.svg)
 You can view Operators also after you deploy OLM(OPERATOR LIFECYLE MANAGER) into the cluster from this link: [OLM Github Releases](https://github.com/operator-framework/operator-lifecycle-manager/releases/)
-
 ![4](https://github.com/burhanuguz/okd-web-console/blob/master/pictures/4.png)
