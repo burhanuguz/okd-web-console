@@ -58,10 +58,8 @@ spec:
     app: okd
   ports:
     - protocol: TCP
-      nodePort: 30000
       port: 443
       targetPort: 8443
-  type: NodePort
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -80,13 +78,7 @@ spec:
 ```
 As an example you can check console on [Katacoda Kubernetes Playground](https://www.katacoda.com/courses/kubernetes/playground)
 - Deploy YAML to Kubernetes Cluster and wait for successful deployment.
-
-![1](https://user-images.githubusercontent.com/59168275/91818196-2b7d9780-ec3e-11ea-8ef7-9189a0984c63.png)
-- Console will be available from NodePort 30000. Select either Host 1 or Host 2 like in the picture. Type 30000 and click Display Port.
-
-![5](https://user-images.githubusercontent.com/59168275/91818296-320c0f00-ec3e-11ea-887b-754d80cbe132.png)
-![6](https://user-images.githubusercontent.com/59168275/91818172-291b3d80-ec3e-11ea-83b9-e727022706c8.png)
-- You will see OKD Web Console.
+- Console will be available from [http://console-okd.NODE-IP.nip.io](http://console-okd.NODE-IP.nip.io).
 
 ![2](https://user-images.githubusercontent.com/59168275/91818221-2d475b00-ec3e-11ea-9686-30043f653c3a.png)
 
