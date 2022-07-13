@@ -9,12 +9,13 @@ spec:
   selector:
     matchLabels:
       app: okd
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
         app: okd
     spec:
+      serviceAccountName: okd-admin
       containers:
       - image: quay.io/openshift/origin-console:latest
         name: okd
@@ -43,31 +44,3 @@ spec:
           - name: https
             containerPort: 443
             protocol: TCP
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: okd
-  namespace: kube-system
-spec:
-  selector:
-    app: okd
-  ports:
-    - protocol: TCP
-      port: 443
-      targetPort: 8443
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: okd
-  namespace: kube-system
-spec:
-  rules:
-  - host: console-okd.NODE-IP.nip.io
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: okd
-          servicePort: 443
